@@ -1,0 +1,421 @@
+/* Estilo geral */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Esconde qualquer overflow lateral */
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    /*background-color: #cf0404;*/
+}
+
+/* Estilos para o contêiner do slider */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* Ajuste este valor conforme o número de slides */
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 1080px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+}
+
+/* Estilo dos botões de navegação */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #FF6F61, #D83A56);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 10;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    background: linear-gradient(135deg, #D83A56, #FF6F61);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-button.prev {
+    left: 20px;
+}
+
+.nav-button.next {
+    right: 20px;
+}
+
+header {
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding-left: 1px;
+    width: 100%; /* Ajusta o width para 100% */
+    margin: 0 auto; /* Centraliza o container se necessário */
+    margin-left: 2%;/* margem no menu */
+    
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 30px;
+    height: 100px;
+}
+
+.menu-icon {
+    color: #fff;
+}
+
+.logo {
+    margin: 0;
+    
+}
+
+.logo img {
+    height: 50px; /* Ajuste a altura da imagem conforme necessário */
+    margin-right: 50px;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    transition: display 0.3s ease;
+    margin-right: 10%;
+    margin-left: 10%;
+    
+}
+
+.menu-items li {
+    margin-left: 10px;
+}
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.menu-items a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-items a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.menu-items a:hover {
+    color: #FFD700;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Estilos para o telefone e redes sociais */
+.contato-redes {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+   
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.telefone i {
+    margin-right: 5px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.telefone a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.telefone a:hover {
+    color: #007BFF;
+}
+
+.redes-sociais a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: #FFD700;
+}
+.telefone i{
+    margin-right: 10px;
+}
+.btn-contato {
+    background-color: #FFD700;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+/* Ajustes para  tilulo  */
+.btn-contato:hover {
+    background-color: #333;
+}
+.banner-area {
+    font-family: 'Roboto', sans-serif;
+    padding: 3px;
+    position: relative;
+    margin: 0 0 4px;
+    background-color: #333; /* Ajuste a cor conforme necessário */
+    /*background-image: url(/images/bg1.png);*/
+    /*background-repeat: no-repeat;*/
+   
+   
+}
+.title{
+   
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    height: 30px;
+    color: #fff;
+    
+}
+.title span{
+    color: #D83A56;
+}
+
+ .sub-tilulo{
+    margin-top: 0;
+    padding:  0;
+    position: relative;
+    text-align: center;
+    font-size: 21px;
+    color: #999898;
+    font-family: Arial, Helvetica, sans-serif, Geneva, Tahoma, sans-serif;
+    
+}
+
+/* css/imagens-destaque.css */
+
+.secao-imagens-destaque {
+    text-align: center;
+    padding: 0px 20px;
+    margin-top: 0;
+}
+
+.secao-imagens-destaque h2 {
+    margin-bottom: 30px;
+}
+
+.container-imagens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.item-imagem {
+    position: relative;
+    width: 200px;
+}
+
+.imagem-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.imagem-wrapper img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.imagem-wrapper .efeito-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.imagem-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+.imagem-wrapper:hover .efeito-hover {
+    width: 100%;
+    height: 100%;
+}
+
+.descricao {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* mobile menu */
+@media (max-width: 768px) {
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .menu-items li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* css/secao-negocio.css */
+
+.secao-principal {
+    background-color: #333; /* Ajuste a cor conforme necessário */
+    padding: 40px 0;
+}
+
+.conteudo-centralizado {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.secao-alinhado-centro {
+    text-align: center;
+    color: #fff; /* Cor do texto */
+}
+
+.titulo-acima {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.estilo-2 {
+    font-family: 'Roboto', sans-serif; /* Fonte ajustada conforme seu projeto */
+}
+
+.titulo {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+/*mobile secao-negocio*/
+@media (max-width: 768px) {
+    .conteudo-centralizado {
+        width: 90%;
+    }
+
+    .titulo-acima {
+        font-size: 16px;
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+}
+
+
+/* Ajustes para dispositivos banner are  */
+@media (max-width: 768px) {
+    .banner-area {
+        padding: 50px 0;
+        font-size: 24px;
+        background-size: cover; /* Ajusta o tamanho do background */
+    }
+
+    .banner-area .title {
+        font-size: 22px;
+        padding: 0 15px; /* Adiciona espaçamento nas laterais para textos longos */
+    }
+}
+
+/* area treino mobile */
+@media (max-width: 768px) {
+    .container-imagens {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-imagem {
+        width: 80%;
+    }
+
+    .descricao {
+        font-size: 14px;
+    }
+}

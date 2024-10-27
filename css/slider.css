@@ -1,0 +1,72 @@
+/* Estilo geral */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+
+}
+
+/* Estilos para o contêiner do slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease; /* Suaviza a transição entre os slides */
+  margin-top: 101px;
+}
+
+.slide {
+  min-width: 100%; /* Faz cada slide ocupar 100% da largura do contêiner */
+  box-sizing: border-box; /* Inclui padding e border no tamanho total do slide */
+}
+
+.slide img {
+  width: 100%;
+  height: 900px; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Ajusta a imagem para cobrir o slide sem distorção */
+}
+
+/* Estilo dos botões de navegação | \ alt +124 alt +92*/
+.nav-button {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #FF6F61, #D83A56);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 10;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+  background: linear-gradient(135deg, #D83A56, #FF6F61);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-button.prev {
+  left: 20px;
+}
+
+.nav-button.next {
+  right: 20px;
+}

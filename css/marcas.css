@@ -1,0 +1,75 @@
+/* css/marcas.css */
+
+.brands-section {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.brands-carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.brands-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.brand-item {
+    flex: 0 0 25%; /* Largura fixa de 25% para cada item (4 itens por vez) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Inclui padding e border na largura e altura */
+}
+
+.brand-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain; /* Ajuste a imagem para caber dentro do container */
+    margin: 0 15px; /* Espaçamento entre as imagens */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .brand-item {
+        flex: 0 0 50%; /* Largura fixa de 50% para cada item (2 itens por vez) */
+        margin: 0 5px; /* Ajuste o espaçamento entre as imagens */
+    }
+
+    .brand-item img {
+        width: 60px; /* Ajuste o tamanho das imagens em telas menores */
+        height: 60px; /* Ajuste o tamanho das imagens em telas menores */
+    }
+}
